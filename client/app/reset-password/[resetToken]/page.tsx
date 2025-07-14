@@ -3,18 +3,20 @@
 import { useUserContext } from "@/context/userContext";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import { Metadata } from "next";
 
-interface Props {
+interface PageProps {
   params: {
     resetToken: string;
   };
 }
 
-export default function Page(props: Props) {
-  const { resetPassword } = useUserContext();
+export default function Page({ params }: PageProps) {
+  const resetToken = params.resetToken;
 
   // ✅ Extract resetToken from params safely
-  const resetToken = props.params.resetToken;
+
+  const { resetPassword } = useUserContext();
 
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState("");
