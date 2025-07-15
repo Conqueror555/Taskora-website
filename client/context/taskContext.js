@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 const TaskContext = createContext();
 
-const serverUrl = "https://taskora-website.onrender.com";
+const serverUrl = "http://localhost:8000";
 
 export const TaskProvider = ({ children }) => {
     
