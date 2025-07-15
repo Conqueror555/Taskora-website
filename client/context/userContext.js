@@ -241,7 +241,7 @@ export const UserContextProvider = ({ children }) => {
     setLoading(true); // Move inside try for cleaner error fallback
 
     const res = await axios.post(
-      `${serverUrl}/api/v1/forgot-password`,
+      `${serverUrl}/api/v1/auth/forgot-password`,
       { email },
       {
         withCredentials: true,
