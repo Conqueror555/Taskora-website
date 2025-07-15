@@ -8,6 +8,7 @@ import Header from "./Components/Header/Header";
 import SidebarProvider from "@/providers/SidebarProvider"; // your right sidebar
 import MainContentLayout from "@/providers/MainContentLayout";
 import MainLayout from "@/providers/MainLayout";
+import GTMinitializer from "@/providers/GTMinitializer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <GTMinitializer />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
