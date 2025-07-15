@@ -81,10 +81,14 @@ export const UserContextProvider = ({ children }) => {
       });
 
       // refresh the user details
-      setTimeout(async () => {
-      await getUser(); // set user context
-      router.push("/"); // go to home/dashboard
-    }, 200);
+      const isLoggedIn = await userLoginStatus(); // checks cookie
+
+    if (isLoggedIn) {
+      await getUser(); // fetch user info
+      router.push("/"); // only redirect if login validated
+    } else {
+      toast.error("Login token not accepted — check cookies/settings.");
+    }
     } catch (error) {
       console.log("Error logging in user", error);
       toast.error(error?.response?.data?.message || error.message || "Something went wrong");
@@ -384,9 +388,9 @@ useEffect(() => {
   useEffect(() => {
   const publicPaths = ["/login", "/register", "/forgot-password", "/reset-password"];
   const isPublic = publicPaths.some((path) => pathname.startsWith(path));
-
+  const userIsEmpty = !user || Object.keys(user).length === 0;
   // Redirect only if the user is not logged in AND on a protected route
-   if (!loading && typeof user?._id === "undefined" && !isPublic) {
+   if (!loading && userIsEmpty  && !isPublic) {
     console.log("🔁 Redirecting to login due to missing user ID");
     router.push("/login");
   }

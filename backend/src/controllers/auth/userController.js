@@ -47,7 +47,7 @@ export const registerUser = asyncHandler(async (req, res) => {
     path: "/",
     httpOnly: true,
     maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
-    sameSite: "None", // cross-site access --> allow all third-party cookies
+    sameSite: "none", // cross-site access --> allow all third-party cookies
     secure: true,
   });
 
@@ -103,13 +103,14 @@ export const loginUser = asyncHandler(async (req, res) => {
     const { _id, name, email, role, photo, bio, isVerified } = userExists;
 
     // set the token in the cookie
-    res.cookie("token", token, {
-      path: "/",
-      httpOnly: true,
-      maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
-      sameSite: "None", // cross-site access --> allow all third-party cookies
-      secure: true,
-    });
+   res.cookie("token", token, {
+  path: "/",
+  httpOnly: true,
+  maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
+  sameSite: "none",
+  secure: true, // true only in production
+});
+
 
     // send back the user and token in the response to the client
     res.status(200).json({
