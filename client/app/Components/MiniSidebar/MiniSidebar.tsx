@@ -48,7 +48,7 @@ function MiniSidebar(){
     return ( 
     <div className="basis-[5rem] flex flex-col bg-[#f9f9f9]">
       <div className="flex items-center justify-center h-[5rem]">
-        <Image src="/taskora-logo.png" 
+        <Image src="/Taskora-logo.png" 
           width={60} 
           height={60} 
           alt="Taskora-logo"
@@ -70,7 +70,11 @@ function MiniSidebar(){
                  </span>
             </li>
           ))}
+          
         </ul>
+         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[12px] font-bold text-black text-center">
+    Creator: PS_555
+  </div>
       </div>
     </div>
   );

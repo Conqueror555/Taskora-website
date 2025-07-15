@@ -16,7 +16,7 @@ function Profile() {
               >
             <div>
                 <Image
-                   src="/taskora-logo.png"
+                   src="/Taskora-logo.png"
                    alt="avatar"
                    width={50}
                    height={50}

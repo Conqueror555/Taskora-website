@@ -24,6 +24,7 @@ function Sidebar() {
       > 
           Sign Out 
       </button>
+      
     </div>
   );
 }
