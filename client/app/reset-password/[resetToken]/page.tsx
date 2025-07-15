@@ -6,6 +6,7 @@ interface PageProps {
   };
 }
 
+// ✅ DO NOT mark this `async` unless you're using `await`
 export default function Page({ params }: PageProps) {
   return <ResetPasswordForm resetToken={params.resetToken} />;
 }

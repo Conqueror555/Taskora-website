@@ -9,7 +9,8 @@ function Modal() {
 
     const{task, handelInput, createTask, isEditing, closeModal, modalMode, activeTask, updateTask,getTasks}= useTasks();
     const [mounted, setMounted] = useState(false);
-    const ref = useRef<HTMLElement>(null);
+    const ref = useRef<HTMLDivElement | null>(null);
+
 
     useDetectOutside({
         ref,
