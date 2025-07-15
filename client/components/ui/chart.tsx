@@ -104,21 +104,24 @@ function ChartTooltipContent(
       labelKey?: string
     }
 ) {
-  const {
-    active,
-    payload: rawPayload = [],
-    className,
-    indicator = "dot",
-    hideLabel = false,
-    hideIndicator = false,
-    label,
-    labelFormatter,
-    labelClassName,
-    formatter,
-    color,
-    nameKey,
-    labelKey,
-  } = props
+ const {
+  active,
+  className,
+  indicator = "dot",
+  hideLabel = false,
+  hideIndicator = false,
+  labelFormatter,
+  labelClassName,
+  formatter,
+  color,
+  nameKey,
+  labelKey,
+} = props
+
+const label = (props as any).label ?? ""
+const rawPayload = (props as any).payload ?? []
+
+
 
   const { config } = useChart()
   const payload = Array.isArray(rawPayload) ? rawPayload : []
@@ -234,16 +237,18 @@ const ChartLegend = RechartsPrimitive.Legend
 function ChartLegendContent({
   className,
   hideIcon = false,
-  payload,
+  payload = [],
   verticalAlign = "bottom",
   nameKey,
-}: React.ComponentProps<"div"> &
-  Pick<LegendProps, "payload" | "verticalAlign"> & {
-    hideIcon?: boolean
-    nameKey?: string
-  }) {
+}: {
+  className?: string
+  hideIcon?: boolean
+  payload?: LegendPayload[]
+  verticalAlign?: "top" | "bottom" | "middle"
+  nameKey?: string
+}) {
   const { config } = useChart()
-  const legendPayload = Array.isArray(payload) ? (payload as LegendPayload[]) : []
+  const legendPayload = Array.isArray(payload) ? payload : []
 
   if (!legendPayload.length) return null
 
@@ -261,9 +266,7 @@ function ChartLegendContent({
         return (
           <div
             key={item.value?.toString()}
-            className={cn(
-              "[&>svg]:text-muted-foreground flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3"
-            )}
+            className="flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground"
           >
             {itemConfig?.icon && !hideIcon ? (
               <itemConfig.icon />
@@ -280,6 +283,7 @@ function ChartLegendContent({
     </div>
   )
 }
+
 
 function getPayloadConfigFromPayload(
   config: ChartConfig,
