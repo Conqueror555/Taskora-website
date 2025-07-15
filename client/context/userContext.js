@@ -81,10 +81,10 @@ export const UserContextProvider = ({ children }) => {
       });
 
       // refresh the user details
-      await getUser(); // fetch before redirecting
-
-      // push user to the dashboard page
-      router.push("/");
+      setTimeout(async () => {
+      await getUser(); // set user context
+      router.push("/"); // go to home/dashboard
+    }, 200);
     } catch (error) {
       console.log("Error logging in user", error);
       toast.error(error?.response?.data?.message || error.message || "Something went wrong");
@@ -241,7 +241,7 @@ export const UserContextProvider = ({ children }) => {
     setLoading(true); // Move inside try for cleaner error fallback
 
     const res = await axios.post(
-      `${serverUrl}/api/v1/auth/forgot-password`,
+      `${serverUrl}/api/v1/forgot-password`,
       { email },
       {
         withCredentials: true,
@@ -386,7 +386,8 @@ useEffect(() => {
   const isPublic = publicPaths.some((path) => pathname.startsWith(path));
 
   // Redirect only if the user is not logged in AND on a protected route
-   if (!loading && !user?._id && !isPublic) {
+   if (!loading && typeof user?._id === "undefined" && !isPublic) {
+    console.log("🔁 Redirecting to login due to missing user ID");
     router.push("/login");
   }
 }, [user, loading, pathname, router]);

@@ -49,7 +49,11 @@ const { user, loading: userLoading } = useUserContext();
     const getTasks = async() => {
       setLoading(true);
       try{
-        const response = await axios.get(`${serverUrl}/api/v1/tasks`);
+        const response = await axios.get(`${serverUrl}/api/v1/tasks`, {
+  headers: {
+    Authorization: `Bearer ${user?.token}`,
+  },
+});
        
         setTasks(response.data.tasks);
       }catch(error){
