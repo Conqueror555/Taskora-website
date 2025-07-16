@@ -45,7 +45,7 @@ function ProfileModal() {
         <div className="mt-4 relative flex justify-between">
           <div className="relative inline-block">
             <Image
-              src={photo}
+              src="/Taskora-logo.png"
               alt="profile"
               width={80}
               height={80}
@@ -155,12 +155,7 @@ function ProfileModal() {
           </div>
 
           <div className="flex justify-end gap-4 border-t-2 border-t-[#323232]/10">
-            <button
-              className="mt-3 py-2 px-4 bg-transparent text-black text-sm font-medium rounded-md border-2 border-[#323232]/10
-                hover:bg-[#EB4E31] hover:border-transparent hover:text-white transition-all duration-300"
-            >
-              Cancel
-            </button>
+            
             <button
               type="submit"
               className="mt-3 py-2 px-4 bg-[#3aafae] text-white text-sm font-medium rounded-md

@@ -5,12 +5,22 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useTasks } from '@/context/taskContext';
 import { useRouter } from 'next/navigation'; 
+import confetti from "canvas-confetti";
 
 function Header() {
   const {user} = useUserContext();
   const router = useRouter();
-  const { openModalForAdd,activeTasks} = useTasks();
+  const { openModalForAdd,activeTasks,openProfileModel} = useTasks();
   const [isMounted, setIsMounted] = useState(false);
+  const handleConfetti = () => {
+  confetti({
+  particleCount: 120,
+  spread: 70,
+  shapes: ["circle"], // or ["square"]
+  origin: { y: 0.6 },
+});
+
+};
 
   useEffect(() => {
     // Set flag true only on client side
@@ -55,9 +65,10 @@ function Header() {
           {user._id ? "Add a New Task" : "Login/Register"}
         </button>
 
+      {isLoggedIn && (
         <div className="flex gap-4 items-center">
           <Link
-            href="https://github.com/Conqueror555"
+            href="https://github.com"
             passHref
             target="_blank"
             rel="noopener noreferrer"
@@ -65,25 +76,23 @@ function Header() {
           >
             {github}
           </Link>
-          <Link
-            href="https://github.com/Conqueror555"
-            passHref
-            target="_blank"
-            rel="noopener noreferrer"
-            className="h-10 w-10 text-purple rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6]"
-          >
-            {moon}
-          </Link>
-          <Link
-            href="https://github.com/Conqueror555"
-            passHref
-            target="_blank"
+          <button
+              onClick={handleConfetti}
+              className="h-10 w-10 text-purple rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6] hover:bg-gray-100 transition"
+                >
+              {moon}
+          </button>
+          <div
+            onClick={openProfileModel}
+            
+            
             rel="noopener noreferrer"
             className="h-10 w-10 text-purple rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6]"
           >
             {profile}
-          </Link>
+          </div>
         </div>
+        )}
       </div>
     </header>
   );

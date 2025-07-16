@@ -39,6 +39,7 @@ export default function RootLayout({
         
       </head>
       <body className={inter.className}>
+       
         <UserProvider>
           <Toaster position="top-center" />
           <div className="h-full flex overflow-hidden relative">
@@ -59,6 +60,7 @@ export default function RootLayout({
             
           </div>
         </UserProvider>
+       
       </body>
     </html>
   );

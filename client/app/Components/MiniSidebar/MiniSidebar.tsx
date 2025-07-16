@@ -7,10 +7,15 @@ import IconCheck from '@/public/icons/IconCheck';
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
 import Link from "next/link";
+import { useUserContext } from "@/context/userContext";
+
 
 
 
 function MiniSidebar(){
+    const { user } = useUserContext();
+    const isLoggedIn = !!user?._id;
+
 
     const pathname = usePathname();
 
@@ -55,7 +60,9 @@ function MiniSidebar(){
           priority
         />
       </div>
+      
       <div className="mt-8  flex flex-col items-center ">
+        {isLoggedIn && (
         <ul className="flex flex-col items-center ">
           {navItems.map((item,index) => (
             <li key={index} className="relative group py-4">
@@ -72,10 +79,12 @@ function MiniSidebar(){
           ))}
           
         </ul>
+        )}
          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[12px] font-bold text-black text-center">
-    Creator: PS_555
-  </div>
+            Creator: PS_555
+          </div>
       </div>
+     
     </div>
   );
 }
