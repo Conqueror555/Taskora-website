@@ -52,17 +52,17 @@ function Modal() {
 
   return (
     <div className="fixed left-0 top-0 z-50 h-full w-full bg-[#333]/30 overflow-hidden">
-     <div  ref = {ref}>
+     <div  ref = {ref} >
        <form
           action=""
-          className="py-5 px-6 max-w-[520px] w-full flex flex-col gap-3 bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-md"
+          className="py-5 px-6 max-w-[520px] w-full flex flex-col gap-3 bg-gray-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-md"
           onSubmit={handleSubmit}
         
        >
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 text-white ">
             <label htmlFor="title">Title</label>
             <input
-                className="bg-[#F9F9F9] p-2 rounded-md border"
+                className="bg-gray-400 p-2 rounded-md border text-black"
                 type="text"
                 placeholder="Task Title"
                 name="title"
@@ -70,10 +70,10 @@ function Modal() {
                 onChange={(e) => handelInput("title")(e)}
                 />
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 text-white">
             <label htmlFor="description">Description</label>
             <textarea
-                className="bg-[#F9F9F9] p-2 rounded-md border resize-none"
+                className="bg-gray-400 p-2 rounded-md border resize-none text-black"
                 name="description"
                 placeholder="Task Description"
                 rows={4}
@@ -81,10 +81,10 @@ function Modal() {
                 onChange={(e) => handelInput("description")(e)}
                 />
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 text-white">
             <label htmlFor="priority">Select Priority</label>
             <select
-                className="bg-[#F9F9F9] p-2 rounded-md border cursor-pointer"
+                className="bg-gray-400 p-2 rounded-md border cursor-pointer text-black"
                 name="priority"
                 value={task?.priority?? "low"}
                 onChange={(e) => handelInput("priority")(e)}
@@ -94,23 +94,23 @@ function Modal() {
                     <option value="high">High</option>
             </select>
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 text-white">
             <label htmlFor="dueDate">Due Date</label>
             <input
-                className="bg-[#F9F9F9] p-2 rounded-md border"
+                className="bg-gray-400 p-2 rounded-md border text-black"
                 type="date"
                 name="dueDate"
                 value={task.dueDate?? ""}
                 onChange={(e) => handelInput("dueDate")(e)}
                 />
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 text-white">
             <label htmlFor="completed">Task Completed</label>
-            <div className="flex items-center justify-between bg-[#F9F9F9] p-2 rounded-md border">
+            <div className="flex items-center justify-between bg-gray-400 p-2 rounded-md border text-black">
                 <label htmlFor="completed">Completed</label>
                 <div>
                     <select
-                        className="bg-[#F9F9F9] p-2 rounded-md border cursor-pointer"
+                        className="bg-gray-400 p-2 rounded-md border cursor-pointer"
                         name="completed"
                         value={task?.completed ? "true": "false"}
                         onChange={(e) => handelInput("completed")(e)}
@@ -124,8 +124,8 @@ function Modal() {
         <div className="mt-8">
             <button
             type="submit"
-            className={`text-white py-2 rounded-md w-full hover:bg-blue-500 transition duration-200 ease-in-out ${
-                modalMode === "edit"? "bg-blue-400" : "bg-green-400"
+            className={`text-white py-2 rounded-md w-full hover:bg-green-400 transition duration-200 ease-in-out ${
+                modalMode === "edit"? "bg-blue-400" : "bg-blue-500"
             }`}
             >
             {modalMode === "edit" ? "Update Task" : "Create Task"}

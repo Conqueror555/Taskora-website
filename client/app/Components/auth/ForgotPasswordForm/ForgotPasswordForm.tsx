@@ -21,13 +21,13 @@ function ForgotPasswordForm() {
   };
 
   return (
-    <form className="relative m-[2rem] px-10 py-14 rounded-lg bg-white max-w-[520px] w-full">
+    <form className="relative m-[2rem] px-10 py-14 rounded-lg bg-gray-500 max-w-[520px] w-full">
       <div className="relative z-10">
-        <h1 className="mb-2 text-center text-[1.35rem] font-medium">
+        <h1 className="mb-2 text-center text-[#f5f5f7] text-[1.35rem] font-medium">
           Enter email to reset password
         </h1>
         <div className="mt-[1rem] flex flex-col">
-          <label htmlFor="email" className="mb-1 text-[#999]">
+          <label htmlFor="email" className="mb-1 text-[#d5d7da]">
             Email
           </label>
           <input
@@ -36,7 +36,7 @@ function ForgotPasswordForm() {
             onChange={handleEmailChange}
             name="email"
             placeholder="johndoe@gmail.com"
-            className="px-4 py-3 border-[2px] rounded-md outline-[#2ECC71] text-gray-800"
+            className="px-4 py-3 border-[2px] rounded-md outline-[#2ECC71] text-[#dad5d5]"
           />
         </div>
         <div className="flex">

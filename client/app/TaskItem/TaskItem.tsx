@@ -25,15 +25,15 @@ function TaskItem({task}:TaskItemProps) {
     };
     const {getTask, openModalForEdit, deleteTask,modalMode} = useTasks();
   return (
-    <motion.div className= "h-[16rem] px-4 py-3 flex flex-col gap-4 shadow-sm bg-[#f9f9f9] rounded-lg border-2 border-white"
+    <motion.div className= "h-[16rem] px-4 py-3 flex flex-col gap-4 shadow-sm bg-gray-600 rounded-lg border-2 border-gray-400"
         variants={item}
     >
         <div>
-            <h4 className="font-bold text-2xl">{task.title}</h4>
-            <p>{task.description}</p>
+            <h4 className="font-bold text-2xl text-gray-200">{task.title}</h4>
+            <p className="text-gray-300">{task.description}</p>
         </div>
         <div className="mt-auto flex justify-between items-center">
-            <p className="text-sm text-gray-400">{formatTime(task.createdAt)}</p>
+            <p className="text-sm text-gray-300">{formatTime(task.createdAt)}</p>
             <p className={`text-sm font-bold ${getPriorityColor(task.priority)}`}>
                 {task.priority}
             </p>
@@ -55,7 +55,7 @@ function TaskItem({task}:TaskItemProps) {
                      }}
                 >{edit}</button>
                 
-                <button className="text-[#F65314]"
+                <button className="text-[#f35618]"
                  onClick={() => {
     const confirmDelete = window.confirm("Are you sure you want to delete this task?");
     if (confirmDelete) {

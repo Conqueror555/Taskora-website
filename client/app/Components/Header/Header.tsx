@@ -35,13 +35,13 @@ function Header() {
   const userName = user?.name || "User";
 
   return (
-    <header className="px-6 my-4 w-full flex items-center justify-between bg-[#f9f9f9]">
+    <header className="px-6 my-4 w-full flex items-center justify-between bg-gray-700">
       <div>
-        <h1 className="text-lg font-medium">
+        <h1 className="text-lg font-medium text-[#f5f5f7]">
           <span role="img" aria-label="wave">👋</span>{" "}
           {isLoggedIn ? `Welcome, ${userName}!` : "Welcome to Taskora"}
         </h1>
-        <p className="text-sm">
+        <p className="text-sm text-[#f5f5f7]">
           {isLoggedIn ? (
             <>You have <span className="font-bold text-[#3aafae]">
               {activeTasks.length}
@@ -72,13 +72,13 @@ function Header() {
             passHref
             target="_blank"
             rel="noopener noreferrer"
-            className="h-10 w-10 text-purple rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6]"
+            className="h-10 w-10 text-[#f5f5f7] rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6]"
           >
             {github}
           </Link>
           <button
               onClick={handleConfetti}
-              className="h-10 w-10 text-purple rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6] hover:bg-gray-100 transition"
+              className="h-10 w-10 text-[#f5f5f7] rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6] hover:bg-gray-100 transition"
                 >
               {moon}
           </button>
@@ -87,7 +87,7 @@ function Header() {
             
             
             rel="noopener noreferrer"
-            className="h-10 w-10 text-purple rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6]"
+            className="h-10 w-10 text-[#f5f5f7] rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6]"
           >
             {profile}
           </div>

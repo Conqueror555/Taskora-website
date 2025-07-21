@@ -14,18 +14,20 @@ function Sidebar() {
     router.push("/login"); // redirect manually here
   };
   return (
-    <div className="w-[18rem]  h-screen fixed top-[3.8rem] right-0 bg-[#f9f9f9] shadow-md z-10 flex flex-col overflow-y-auto">
-      <Profile />
-      <div className="mt-0 mx-5">
-        <RadioChart />
+    
+      <div className="w-[18rem]  h-screen fixed top-[3.8rem] right-0 bg-gray-700 shadow-md z-10 flex flex-col overflow-y-auto">
+        <Profile />
+        <div className="mt-0 mx-5">
+          <RadioChart />
+        </div>
+        <button className="mt-0 mb-6 mx-6 py-4 px-8 bg-[#EB4E31] text-white rounded-[50px] hover:bg-[#3aafae] transition duration-200 ease-in-out"
+          onClick={handleLogout}
+        > 
+            Sign Out 
+        </button>
+        
       </div>
-      <button className="mt-0 mb-6 mx-6 py-4 px-8 bg-[#EB4E31] text-white rounded-[50px] hover:bg-[#3aafae] transition duration-200 ease-in-out"
-        onClick={handleLogout}
-      > 
-          Sign Out 
-      </button>
-      
-    </div>
+    
   );
 }
 

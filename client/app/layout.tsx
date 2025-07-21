@@ -47,7 +47,7 @@ export default function RootLayout({
             <MiniSidebar />
 
             {/* Main content */}
-            <div className="flex-1 flex flex-col">
+            <div className="flex-1 flex flex-col bg-gray-700">
               <Header />
               <MainContentLayout>
                 <MainLayout>{children}</MainLayout>

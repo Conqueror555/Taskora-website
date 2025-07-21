@@ -44,7 +44,7 @@
 /*---break---*/
 :root {
   --radius:0.625rem;
-  --background:oklch(1 0 0);
+  --background:oklch(89.722% 0.08993 185.268);
   --foreground:oklch(0.141 0.005 285.823);
   --card:oklch(1 0 0);
   --card-foreground:oklch(0.141 0.005 285.823);
@@ -119,7 +119,7 @@ body {
 
 .auth-page {
   height: 100vh;
-  background: url("../public/glass-bg.png") no-repeat center center fixed;
+  
 }
 
 .auth-page form {

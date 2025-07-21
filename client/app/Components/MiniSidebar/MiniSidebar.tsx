@@ -20,7 +20,7 @@ function MiniSidebar(){
     const pathname = usePathname();
 
     const getStrokeColor = (link: string) => {
-  return pathname === link ? "#3aafae" : "#71717a";
+  return pathname === link ? "#2ECC71" : "#dad5d5";
 };
 
 
@@ -51,7 +51,7 @@ function MiniSidebar(){
 
     ];
     return ( 
-    <div className="basis-[5rem] flex flex-col bg-[#f9f9f9]">
+    <div className="basis-[5rem] flex flex-col bg-gray-700">
       <div className="flex items-center justify-center h-[5rem]">
         <Image src="/Taskora-logo.png" 
           width={60} 
@@ -80,7 +80,7 @@ function MiniSidebar(){
           
         </ul>
         )}
-         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[12px] font-bold text-black text-center">
+         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[12px] font-bold text-#f5f5f5 text-center">
             Creator: PS_555
           </div>
       </div>

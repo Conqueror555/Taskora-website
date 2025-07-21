@@ -21,13 +21,13 @@ function LoginForm() {
   return (
     <form
       onSubmit={loginUser}
-      className="relative m-[2rem] px-10 py-14 rounded-lg bg-white w-full max-w-[520px]"
+      className="relative m-[2rem] px-10 py-14 rounded-lg bg-gray-500 w-full max-w-[520px]"
     >
       <div className="relative z-10">
-        <h1 className="mb-2 text-center text-[1.35rem] font-medium">
+        <h1 className="mb-2 text-center text-[#f5f5f7] text-[1.35rem] font-medium">
           Login to Your Account
         </h1>
-        <p className="mb-8 px-[2rem] text-center text-[#999] text-[14px]">
+        <p className="mb-8 px-[2rem] text-center text-[#d5d7da] text-[14px]">
           Login Now. Don't have an account?{" "}
           <a
             href="/register"
@@ -38,7 +38,7 @@ function LoginForm() {
         </p>
 
         <div className="mt-[1rem] flex flex-col">
-          <label htmlFor="email" className="mb-1 text-[#999]">
+          <label htmlFor="email" className="mb-1 text-[#f1e9e9]">
             Email
           </label>
           <input
@@ -47,13 +47,13 @@ function LoginForm() {
             value={email || ""}
             onChange={handlerUserInput("email")}
             name="email"
-            className="px-4 py-3 border-[2px] rounded-md outline-[#2ECC71] text-gray-800"
+            className="px-4 py-3 border-[2px] rounded-md outline-[#2ECC71] text-[#dad5d5]"
             placeholder="johndoe@gmail.com"
           />
         </div>
 
         <div className="relative mt-[1rem] flex flex-col">
-          <label htmlFor="password" className="mb-1 text-[#999]">
+          <label htmlFor="password" className="mb-1 text-[#f1e9e9]">
             Password
           </label>
           <input
@@ -62,7 +62,7 @@ function LoginForm() {
             value={password || ""}
             onChange={handlerUserInput("password")}
             name="password"
-            className="px-4 py-3 border-[2px] rounded-md outline-[#2ECC71] text-gray-800"
+            className="px-4 py-3 border-[2px] rounded-md outline-[#2ECC71] text-[#dad5d5]"
             placeholder="***************"
           />
           <button

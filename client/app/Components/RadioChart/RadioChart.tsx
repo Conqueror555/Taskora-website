@@ -44,10 +44,10 @@ function RadioChart() {
   ]
 
   return (
-    <Card className="flex flex-col gap-0 border-2 border-white shadow-none bg-[#EDEDED]">
+    <Card className="flex flex-col gap-0 border-2 border-gray-700 shadow-none bg-gray-400">
       <CardHeader className="items-center pb-0">
         <CardTitle>Completed vs Pending Tasks</CardTitle>
-        <CardDescription>Task completion status.</CardDescription>
+        <CardDescription className="text-gray-800">Task completion status.</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-1 items-center pb-0">
         <ChartContainer
@@ -80,7 +80,7 @@ function RadioChart() {
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 4}
-                          className="fill-muted-foreground"
+                          className="fill-muted-foreground text-black"
                         >
                           Tasks
                         </tspan>

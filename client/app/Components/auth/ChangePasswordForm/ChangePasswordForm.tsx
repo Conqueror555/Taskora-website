@@ -32,13 +32,13 @@ function ChangePasswordForm() {
   };
 
   return (
-    <form className="ml-0 mt-0 m-[2rem] px-10 py-14 rounded-lg bg-white max-w-[520px] w-full">
+    <form className="ml-0 mt-0 m-[2rem] px-10 py-14 rounded-lg bg-gray-500 max-w-[520px] w-full">
       <div className="relative z-10">
-        <h1 className="mb-2 text-center text-[1.35rem] font-medium">
+        <h1 className="mb-2 text-center text-[#f5f5f7] text-[1.35rem] font-medium">
           Reset Your Password!
         </h1>
         <div className="relative mt-[1rem] flex flex-col">
-          <label htmlFor="email" className="mb-1 text-[#999]">
+          <label htmlFor="email" className="mb-1 text-[#dad5d5]">
             Current Password
           </label>
           <input
@@ -48,10 +48,10 @@ function ChangePasswordForm() {
             id="password"
             name="password"
             placeholder="*********"
-            className="px-4 py-3 border-[2px] rounded-md outline-[#2ECC71] text-gray-800"
+            className="px-4 py-3 border-[2px] rounded-md outline-[#2ECC71] text-[#dad5d5]"
           />
           <button
-            className="absolute p-1 right-4 top-[43%] text-[22px] text-[#999] opacity-45"
+            className="absolute p-1 right-4 top-[43%] text-[22px] text-[#dad5d5] opacity-45"
             onClick={togglePassword}
             type="button"
           >
@@ -63,7 +63,7 @@ function ChangePasswordForm() {
           </button>
         </div>
         <div className="relative mt-[1rem] flex flex-col">
-          <label htmlFor="email" className="mb-1 text-[#999]">
+          <label htmlFor="email" className="mb-1 text-[#dad5d5]">
             New Password
           </label>
           <input
@@ -73,10 +73,10 @@ function ChangePasswordForm() {
             id="password"
             name="password"
             placeholder="*********"
-            className="px-4 py-3 border-[2px] rounded-md outline-[#2ECC71] text-gray-800"
+            className="px-4 py-3 border-[2px] rounded-md outline-[#2ECC71] text-[#dad5d5]"
           />
           <button
-            className="absolute p-1 right-4 top-[43%] text-[22px] text-[#999] opacity-45"
+            className="absolute p-1 right-4 top-[43%] text-[22px] text-[#dad5d5] opacity-45"
             onClick={togglePassword}
             type="button"
           >
