@@ -24,10 +24,10 @@ function LoginForm() {
       className="relative m-[2rem] px-10 py-14 rounded-lg bg-gray-500 w-full max-w-[520px]"
     >
       <div className="relative z-10">
-        <h1 className="mb-2 text-center text-[#f5f5f7] text-[1.35rem] font-medium">
+        <h1 className="mb-2 text-center text-white text-[1.35rem] font-medium">
           Login to Your Account
         </h1>
-        <p className="mb-8 px-[2rem] text-center text-[#d5d7da] text-[14px]">
+        <p className="mb-8 px-[2rem] text-center text-white text-[14px]">
           Login Now. Don't have an account?{" "}
           <a
             href="/register"
@@ -38,7 +38,7 @@ function LoginForm() {
         </p>
 
         <div className="mt-[1rem] flex flex-col">
-          <label htmlFor="email" className="mb-1 text-[#f1e9e9]">
+          <label htmlFor="email" className="mb-1 text-white">
             Email
           </label>
           <input
@@ -53,7 +53,7 @@ function LoginForm() {
         </div>
 
         <div className="relative mt-[1rem] flex flex-col">
-          <label htmlFor="password" className="mb-1 text-[#f1e9e9]">
+          <label htmlFor="password" className="mb-1 text-white">
             Password
           </label>
           <input
