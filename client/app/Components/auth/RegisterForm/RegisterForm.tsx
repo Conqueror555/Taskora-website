@@ -90,7 +90,7 @@ function RegisterForm() {
           </button>
         </div>
       </div>
-      <Image src="/flurry.png" alt="" width={500} height={300} />
+      
     </form>
   );
 }

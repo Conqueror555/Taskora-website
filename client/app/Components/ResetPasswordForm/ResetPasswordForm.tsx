@@ -57,7 +57,7 @@ export default function ResetPasswordForm({ resetToken }: Props) {
         >
           Reset Password
         </button>
-        <img src="/flurry.png" alt="" />
+        
       </form>
     </main>
   );

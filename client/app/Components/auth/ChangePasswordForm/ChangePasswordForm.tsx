@@ -97,7 +97,7 @@ function ChangePasswordForm() {
           </button>
         </div>
       </div>
-      <img src="/flurry.png" alt="" />
+      
     </form>
   );
 }

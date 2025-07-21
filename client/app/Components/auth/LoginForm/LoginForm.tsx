@@ -99,7 +99,7 @@ function LoginForm() {
       </div>
 
       <div className="absolute bottom-0 right-0">
-        <img src="/flurry.png" alt="Decor" loading="lazy" />
+        
       </div>
     </form>
   );
