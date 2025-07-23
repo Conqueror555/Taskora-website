@@ -1,4 +1,5 @@
-<img width="1919" height="915" alt="Screenshot 2025-07-21 224234" src="https://github.com/user-attachments/assets/cef08a3c-ffa8-4398-aa23-eb672617e348" />
+<img width="1919" height="912" alt="Screenshot 2025-07-21 224336" src="https://github.com/user-attachments/assets/d758d761-161d-4eb2-802d-b88fa13a8fea" />
+
 
 Developed a feature-rich task management platform called Taskora that enables users to efficiently organize, track, and manage their daily tasks. The application includes:
 
