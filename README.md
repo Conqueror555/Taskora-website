@@ -10,3 +10,15 @@ Developed a feature-rich task management platform called Taskora that enables us
  6. Role-based Routing : Personalized user experience after login.
 
 Website link: https://taskora-website10.vercel.app
+<img width="1919" height="910" alt="Screenshot 2025-07-21 224519" src="https://github.com/user-attachments/assets/296fd5a6-352d-4317-a64f-1a6652ff0a65" />
+<img width="1919" height="912" alt="Screenshot 2025-07-21 224336" src="https://github.com/user-attachments/assets/10e103d2-fb26-4f08-a74c-aaa16ab71306" />
+<img width="1919" height="912" alt="Screenshot 2025-07-21 224336" src="https://github.com/user-attachments/assets/f7a24ccd-7840-40d8-baf1-30864ce07f20" />
+<img width="1919" height="915" alt="Screenshot 2025-07-21 224259" src="https://github.com/user-attachments/assets/d973b0a2-ae08-4e47-9ba4-a8a69adea064" />
+<img width="1919" height="915" alt="Screenshot 2025-07-21 224234" src="https://github.com/user-attachments/assets/3c86916c-2b51-49fb-bf14-9aa806c0a24b" />
+<img width="1914" height="911" alt="Screenshot 2025-07-21 224207" src="https://github.com/user-attachments/assets/217c7d9c-d20a-48bf-8437-db7e18c58fc7" />
+
+
+
+
+
+
